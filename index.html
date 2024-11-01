@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+	<meta charset="UTF-8">
+	<title>Feliz Cumple</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="card">
+		<div class="imgBox">
+			<div class="bark"></div>
+			<img src="./3630496.jpg">
+		</div>
+		<div class="details">
+			<h4 class="color1">¡Hola Valen!</h2>
+			<h4 class="color2 margin">Feliz cumple adelantado</h3>
+			<p>Quería adelantarme y desearte un feliz cumpleaños Valen. Aunque no nos conocemos mucho, me encantaría compartir más momentos contigo. Espero que tu día sea increíble y que este nuevo año te traiga muchas cosas buenas.</p>
+			<p class="text-right">Feliz Cumple Att:</p>
+			<p class="text-right">♥KURO</p>
+		</div>
+	</div>
+	<script>
+        const createHeart = () => {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            heart.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(heart);
+
+            heart.addEventListener('animationend', () => {
+                heart.remove();
+            });
+        };
+
+        setInterval(createHeart, 600);
+    </script>
+</body>
+</html>
